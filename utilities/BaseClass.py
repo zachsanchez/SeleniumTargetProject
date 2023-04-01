@@ -12,11 +12,11 @@ from PO.HomePage import HomePage
 class BaseClass:
     # all of these will be reused to help search for multiple items without manually writing this for each one!
 
-    def scrollDown(self):
-        self.driver.execute_script("window.scrollTo(0, 200);")
+    # grabs all rating counts of items populating on page after search
+    search_results = (By.XPATH, "(//span[@class='RatingStars__RatingCount-sc-k7ad82-1 jdkOOw'])")
 
-    def scrollUp(self):
-        self.driver.execute_script("window.scrollTo(0, document.body.scrollTop);")
+    def searchResults(self):
+        return self.driver.find_elements(*BaseClass.search_results)
 
     def searchItem(self, data):
         self.driver.find_element(By.CSS_SELECTOR, "#search").send_keys(data)
@@ -42,7 +42,7 @@ class BaseClass:
         log = self.getLog()
         # helps keep track of the index of each element in data.....set to -1 so we don't iterate over length of webelement list
         i = -1
-        ratings = HomePage.searchResults(self)
+        ratings = BaseClass.searchResults(self)
         for rating in ratings:
             # iterates i by 1 so that we start at index 0
             i += 1

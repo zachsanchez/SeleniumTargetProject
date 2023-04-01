@@ -9,12 +9,13 @@ class HomePage:
 
     def __init__(self, driver):
         self.driver = driver
-    # grabs all rating counts of items populating on page after search
-    search_results = (By.XPATH, "(//span[@class='RatingStars__RatingCount-sc-k7ad82-1 jdkOOw'])")
-    cart_button = (By.XPATH, "//a[text()='View cart & check out']") # (By.CSS_SELECTOR, ".styles__PrimaryHeaderLink-sc-srf2ow-1.styles__CartLink-sc-vxcbjb-0.hamxlk.fZoSdJ")
 
-    def searchResults(self):
-        return self.driver.find_elements(*HomePage.search_results)
+    cart_button = (By.XPATH, "//a[text()='View cart & check out']")
+    # # grabs all rating counts of items populating on page after search
+    # search_results = (By.XPATH, "(//span[@class='RatingStars__RatingCount-sc-k7ad82-1 jdkOOw'])")
+    #
+    # def searchResults(self):
+    #     return self.driver.find_elements(*HomePage.search_results)
 
     def goToCheckout(self):
         wait = WebDriverWait(self.driver, 15)
