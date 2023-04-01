@@ -24,9 +24,32 @@ class TestTarget(BaseClass):
         wait.until(EC.element_to_be_clickable((By.XPATH, ".//button[@aria-label='close']")))
         self.continueShopping()
 
+        # clears search field as site does not automatically do it after each search
         time.sleep(2)
         self.clearSearch()
         log.info("Searching for second item: MILK")
+
+        time.sleep(2.4)
+        self.searchItem(getData["item2"])
+        time.sleep(2)
+        self.clickSearch()
+        self.findItem()
+        log.info("MILK was found and added to cart")
+        wait.until(EC.element_to_be_clickable((By.XPATH, ".//button[@aria-label='close']")))
+        self.continueShopping()
+
+        # clears search field as site does not automatically do it after each search
+        time.sleep(3)
+        self.clearSearch()
+        log.info("Searching for third item: EGG")
+        time.sleep(1.8)
+
+        self.searchItem(getData["item3"])
+        time.sleep(3)
+        self.clickSearch()
+        self.findItem()
+        log.info("EGG was found and added to cart")
+
 
     @pytest.fixture(params=SearchData.test_search_data)
     def getData(self, request):

@@ -19,7 +19,7 @@ class BaseClass:
         self.driver.execute_script("window.scrollTo(0, document.body.scrollTop);")
 
     def searchItem(self, data):
-        self.driver.find_element(By.CSS_SELECTOR, "#search").send_keys(data)  # (*HomePage.item_search)
+        self.driver.find_element(By.CSS_SELECTOR, "#search").send_keys(data)
 
     def clearSearch(self):
         wait = WebDriverWait(self.driver, 15)
@@ -40,12 +40,14 @@ class BaseClass:
 
     def findItem(self):
         log = self.getLog()
-        # helps keep track of the index of each element in data
+        # helps keep track of the index of each element in data.....set to -1 so we don't iterate over length of webelement list
         i = -1
         ratings = HomePage.searchResults(self)
         for rating in ratings:
+            # iterates i by 1 so that we start at index 0
             i += 1
             if int(rating.text) > 1000:
+                log.info(rating.text)
                 log.info("Item was found at index " + str(i))
                 break
 

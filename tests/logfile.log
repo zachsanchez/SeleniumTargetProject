@@ -30,3 +30,30 @@
 2023-03-31 20:21:43,850 :INFO : findItem :Item was found at index 0
 2023-03-31 20:21:49,476 :INFO : test_groceryShopping :BREAD was found and added to cart
 2023-03-31 20:21:52,600 :INFO : test_groceryShopping :Searching for second item: MILK
+2023-03-31 21:30:52,082 :INFO : test_groceryShopping :Searching for first item: BREAD
+2023-03-31 21:30:56,303 :INFO : findItem :2046
+2023-03-31 21:30:56,303 :INFO : findItem :Item was found at index 3
+2023-03-31 21:35:19,809 :INFO : test_groceryShopping :Searching for first item: BREAD
+2023-03-31 21:35:23,903 :INFO : findItem :1469
+2023-03-31 21:35:23,903 :INFO : findItem :Item was found at index 1
+2023-03-31 21:36:07,471 :INFO : test_groceryShopping :Searching for first item: BREAD
+2023-03-31 21:36:11,565 :INFO : findItem :2046
+2023-03-31 21:36:11,565 :INFO : findItem :Item was found at index 2
+2023-03-31 21:37:08,791 :INFO : test_groceryShopping :Searching for first item: BREAD
+2023-03-31 21:37:13,044 :INFO : findItem :2046
+2023-03-31 21:37:13,044 :INFO : findItem :Item was found at index 2
+2023-03-31 21:37:18,645 :INFO : test_groceryShopping :BREAD was found and added to cart
+2023-03-31 21:37:21,937 :INFO : test_groceryShopping :Searching for second item: MILK
+2023-03-31 21:37:27,042 :INFO : findItem :3806
+2023-03-31 21:37:27,042 :INFO : findItem :3806
+2023-03-31 21:37:27,042 :INFO : findItem :Item was found at index 0
+2023-03-31 21:37:27,042 :INFO : findItem :Item was found at index 0
+2023-03-31 21:37:32,697 :INFO : test_groceryShopping :MILK was found and added to cart
+2023-03-31 21:37:36,923 :INFO : test_groceryShopping :Searching for third item: EGG
+2023-03-31 21:37:42,410 :INFO : findItem :1518
+2023-03-31 21:37:42,410 :INFO : findItem :1518
+2023-03-31 21:37:42,410 :INFO : findItem :1518
+2023-03-31 21:37:42,410 :INFO : findItem :Item was found at index 4
+2023-03-31 21:37:42,410 :INFO : findItem :Item was found at index 4
+2023-03-31 21:37:42,410 :INFO : findItem :Item was found at index 4
+2023-03-31 21:37:48,020 :INFO : test_groceryShopping :EGG was found and added to cart
